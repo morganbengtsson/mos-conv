@@ -22,6 +22,10 @@ btQuaternion inline to_bt(const glm::quat &quat){
   return btQuaternion(quat.x, quat.y, quat.z, quat.w);
 }
 
+glm::quat inline to_glm(const btQuaternion &quat){
+  return glm::quat(quat.getW(), quat.getX(), quat.getY(), quat.getZ());
+}
+
 /*
 btTriangleMesh inline to_bt(const mos::gfx::Mesh & mesh)
 {
